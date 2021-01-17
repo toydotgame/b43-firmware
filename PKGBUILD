@@ -1,7 +1,8 @@
 # Maintainer: Xavion <Xavion (dot) 0 (at) Gmail (dot) com>
+# Forked by: Toydotgam <toydotgame (at) gmail (dot) com>
+#	I changed it so that the entire package can be cloned and built locally, in case the AUR package gets 404'd one day.
 
 pkgname=b43-firmware
-_classic_=${pkgname}-classic
 pkgver=6.30.163.46
 pkgrel=1
 pkgdesc="Firmware for Broadcom B43 wireless networking chips - latest release"
@@ -10,10 +11,10 @@ url="https://wireless.wiki.kernel.org/en/users/Drivers/b43"
 license=("unknown")
 depends=("linux>=3.2")
 makedepends=("b43-fwcutter>=018")
-conflicts=(${_classic_})
+conflicts=(b43-firmware-classic)
 install=${pkgname}.install
 options=(!emptydirs)
-source=(http://www.lwfinger.com/${pkgname}/broadcom-wl-${pkgver}.tar.bz2)
+source=(./src/broadcom-wl-6.30.163.46.tar.bz2)
 
 package() {
 	cd "${srcdir}"
