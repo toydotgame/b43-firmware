@@ -1,5 +1,5 @@
 post_upgrade() {
-	echo "==> If you encounter problems with v6.30, try the 'b43-firmware-classic' package (v5.100) instead."
+	echo "==> If you encounter problems with v6.30, try the 'b43-firmware-classic' package (v5.100) (On the AUR) instead."
 }
 
 post_install() {
